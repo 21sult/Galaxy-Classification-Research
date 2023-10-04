@@ -15,7 +15,7 @@ excluding galaxies with a specific star formation rate between −11 to −10, w
 the removal of the green valley, the criteria did not yield very reliable results, yet upon the removal
 two of them gave very satisfying results.
 
-# How to Use
+# The Code, and how to use it
 The file 'lab.ipynb' can be accessed in a JupyterLab notebook.
 
 It will be better understood by reading the accompanying paper, 'Astrophysics Star Formation Report.pdf'. Here I will give a **brief outline of what each section of the code does**. Both the paper and the following outline were written with an audience with knowledge in Physics/Astrophysics in mind.
