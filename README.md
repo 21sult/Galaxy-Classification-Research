@@ -1,5 +1,5 @@
 # Research: Galaxy Categorisation (Star Forming, Quiescent, Green Valley)
-This is astrophysics research study using data from the COSMOS2020 catalog, to assess methodologies for galaxy categorisation in terms of their star formation capability. It was developed at the University of Lisbon, by Victor Sultanum and supervisor Cirino Pappalardo.
+This is astrophysics research study using data from the COSMOS2020 catalog, to assess methodologies for galaxy categorisation in terms of their star formation capability. It was developed at the University of Lisbon, by Victor Sultanum and supervisor Cirino Pappalardo. **It is highly recommended to read the .pdf paper as it completely elucidates the context of the research and code.**
 
 # Description
 Galaxies can either be classified as "star forming", if they are relatively new and forming stars,
@@ -26,7 +26,17 @@ It will be better understood by reading the accompanying paper, 'Astrophysics St
  This section of the code consists of importing the COSMOS2020 catalog along with all necessary packages.
 
 ### 1.2. Define Cells
-  Here we filter the entire catalog, selecting for galaxies using LePhare type 0, setting the UVISTA magnitude upper limit to 22.4, and choosing the redshift range 0 < z < 3. This redshift range is then subdivided into 6 cells, 0 < z < 0.5, 0.5 < z < 1.0, 1.0 < z < 1.5, and so on.
+  Here we filter the entire catalog, selecting for galaxies using LePhare type 0, setting the UVISTA magnitude upper limit to 22.4, and choosing the redshift range 0 < z < 3. This redshift range is then subdivided into 6 bins, or cells: 0 < z < 0.5, 0.5 < z < 1.0, 1.0 < z < 1.5, and so on.
+  + `lp_type`: LePhare type (0: galaxy, 1: star, 2: Xray sour., -9: failure in fit)
+  + `lp_zBEST`: LePhare redshift z
+  + `ez_z_phot`: EAZY redshift z
+  + `UVISTA_H_MAG_AUTO`: UVISTA magnitude
+    
+The total 0 < z < 3 sample is stored in
+ 
+`Mothercell = (hd[1].data['FLAG_COMBINED'] == 0) & (hd[1].data['lp_type'] == 0) & (hd[1].data['UVISTA_Ks_MAG_AUTO'] < 22.4) & (hd[1].data['ez_z_phot'] < 3.0)`
+
+The separate redshift bins are then selected from this variable.
 
 ### 1.3. Define SF, Q according to sSFR
   The code here classifies the galaxies as either Star Forming or Quiescent using the sSFR (specific star formation rate) criterion, for the entire redshift range as well as for each of the 6 bins.
