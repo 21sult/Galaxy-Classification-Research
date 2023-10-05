@@ -68,15 +68,15 @@ The separate redshift bins are then selected from this variable.
 ### 3.2. Scatter plots + sSFR analysis
   For the UVJ and NUVrJ data extracted, a scatterplot showing the colour-colour diagrams of the sample is produced, as well as the classification lines that divide the sample between Star Forming and Quiescent galaxies, for three classification methods: "UVJ-1", "UVJ-2" and "NUVrJ". The proportion of Star Forming and Quiescent galaxies is then computed for each method using the sSFR analysis function defined earlier. This is done for the entire 0 < z < 3 range as well as separately for each bin.
 
-_Examples:_
+_Example:_
 
-![uvjdiagram](https://github.com/21sult/cosmos2020galaxies/assets/145617965/69c00daf-c706-466b-a1dd-aa45bb0312c9)
 ![uvjdiagram_all](https://github.com/21sult/cosmos2020galaxies/assets/145617965/bb20694d-92f8-4029-b2c0-2f1f08d791f7)
 
 ### 3.3. sSFR Histogram
   This time, using the specific Star Formation Rate directly, we separate the galaxies in three categories: Star Forming, Quiescent and Green Valley (in between the first two). This fourth classification method was called "sSFR", and was the baseline, benchmark criterion for estimating the performance of the previous methods. Histograms are built for all redshift bins and compared to the classification methThods of the previous section.
 
 _Example_:
+
 ![ssfrhist_all](https://github.com/21sult/cosmos2020galaxies/assets/145617965/953ed631-9590-4f38-aa81-1b0a7b3fa84b)
 
 ## 4. Discussion
